@@ -23,6 +23,8 @@ model User {
   updatedAt DateTime @updatedAt
 
   bookmarks Bookmark[]
+
+  @@map("users")
 }
 
 model Bookmark {
@@ -36,4 +38,6 @@ model Bookmark {
   updatedAt DateTime @updatedAt
 
   @@index([userId])
+
+  @@map("bookmarks")
 }
