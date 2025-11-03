@@ -14,8 +14,8 @@ export class AuthController {
     }
 
     @Post('signin')
-    signin(@Body('email') email: string, @Body('password') password: string){
-        console.log({email, password});
-        return this.authService.signin();
+    signin(@Body() dto: AuthDto){
+        console.log({dto});
+        return this.authService.signin(dto);
     }
 }
