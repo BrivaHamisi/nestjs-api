@@ -38,7 +38,8 @@ export class AuthService {
             const { hash: _, ...safeUser } = user;
 
             // return the saved user
-            return safeUser;
+            // return safeUser;
+            return this.signToken(user.id, user.email);
 
         } catch (error) {
             if (error instanceof Prisma.PrismaClientKnownRequestError ){
