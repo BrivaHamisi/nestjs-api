@@ -25,8 +25,13 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
             throw new UnauthorizedException("User not found");
         }
 
+        console.log({ 'User in validate': user });
+
         // delete user.hash;
         const { hash: _, ...safeUser } = user;
+
+        console.log({ 'Safe User': safeUser });
+        console.log({ 'Payload in validate': payload });
 
         return payload;
     }
