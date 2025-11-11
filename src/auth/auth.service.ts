@@ -1,5 +1,3 @@
-import { Secret } from './../../node_modules/@types/jsonwebtoken/index.d';
-// import { Prisma } from 'generated/prisma/client';
 import { Prisma } from '@prisma/client';
 import { ForbiddenException, Injectable } from "@nestjs/common";
 import { PrismaService } from "src/prisma/prisma.service";
